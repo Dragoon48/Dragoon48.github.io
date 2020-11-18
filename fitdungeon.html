@@ -140,14 +140,14 @@ tw-story[tags~="opening"] {
 (print: $cooldown&#39;s (it + 1)) for (either: ...$time)
 
 (if: $cooldowntimer is 3)[[Finish|end]]\
-(if: $cooldowntimer is not 3)[[Next|cooldown]]</tw-passagedata><tw-passagedata pid="14" name="end" tags="outside" position="1439,392" size="100,100">Thanks for playing!
+(if: $cooldowntimer is not 3)[[Next|cooldown]]</tw-passagedata><tw-passagedata pid="14" name="end" tags="outside" position="1433,319" size="100,100">Thanks for playing!
 
 Folow along with this two minute cooldown stretch
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/y_WtoHyB5ws&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
 Made by &lt;a href=http://www.roamingrangerfit.com target=_blank&gt;roamingrangerfit.com&lt;/a&gt;
 
-[[Play again|Intro]]</tw-passagedata><tw-passagedata pid="15" name="Intro" tags="outside" position="208,13" size="100,100">Welcome to the Fitness Dungeon Adventure! Here you&#39;re on a quest for treasure in a randomized dungeon. Everytime you play, you&#39;re workout will be different! There are videos along the way to teach you proper form and modifications for each exercise. Have fun!
+[[Play again|restart]]</tw-passagedata><tw-passagedata pid="15" name="Intro" tags="outside" position="208,13" size="100,100">Welcome to the Fitness Dungeon Adventure! Here you&#39;re on a quest for treasure in a randomized dungeon. Everytime you play, you&#39;re workout will be different! There are videos along the way to teach you proper form and modifications for each exercise. Have fun!
 
 [[Start short workout|Start short]]
 
@@ -295,7 +295,7 @@ Do &lt;a href=https://youtu.be/uyITq6ACKxI target=_blank&gt;butt kicks&lt;/a&gt;
 
 [[Begin your quest|warmup leg]]
 
-(set: $long to 1)</tw-passagedata></tw-storydata>
+(set: $long to 1)</tw-passagedata><tw-passagedata pid="17" name="restart" tags="" position="1435,478" size="100,100">(reload:)</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.

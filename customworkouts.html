@@ -11,7 +11,13 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="Custom random workouts" startnode="1" creator="Twine" creator-version="2.3.9" ifid="08773E49-4669-4AAF-A5BB-2A89862CDB1D" zoom="1" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">a {color: yellow;}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Untitled Passage" tags="" position="2,21" size="100,100">Welcome to custom random workout generator. First we&#39;ll enter our exercises.
+<tw-storydata name="Custom random workouts" startnode="1" creator="Twine" creator-version="2.3.9" ifid="08773E49-4669-4AAF-A5BB-2A89862CDB1D" zoom="1" format="Harlowe" format-version="3.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-passage {
+  color: black;
+	background-color: white;
+	  background-size: 100% 100%;
+	  background-repeat: none;
+	  padding: 5%;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="start" tags="" position="2,21" size="100,100">Welcome to custom random workout generator. First we&#39;ll enter our exercises.
 
 How many exercises do you want to do?
 
@@ -24,99 +30,121 @@ How many exercises do you want to do?
 
 (set: $3ex to 0)
 (set: $4ex to 0)
-(set: $5ex to 0)</tw-passagedata><tw-passagedata pid="2" name="workout 1" tags="" position="132,27" size="100,100">(set: $workout1 to (prompt: &quot;First exercise&quot;,&quot;&quot;))
+(set: $5ex to 0)</tw-passagedata><tw-passagedata pid="2" name="workout 1" tags="" position="15,285" size="100,100">(set: $workout1 to (prompt: &quot;First exercise&quot;,&quot;&quot;))
 (if: $workout1 is &quot;&quot;)[(undo:)]
 
-[[Next|workout 2]]</tw-passagedata><tw-passagedata pid="3" name="workout 2" tags="" position="277,28" size="100,100">(set: $workout2 to (prompt: &quot;Second exercise&quot;,&quot;&quot;))
+[[Next|workout 2]]</tw-passagedata><tw-passagedata pid="3" name="workout 2" tags="" position="146,281" size="100,100">(set: $workout2 to (prompt: &quot;Second exercise&quot;,&quot;&quot;))
 (if: $workout2 is &quot;&quot;)[(undo:)]
 
-[[Next|workout 3]]</tw-passagedata><tw-passagedata pid="4" name="workout 3" tags="" position="402,29" size="100,100">(set: $workout3 to (prompt: &quot;Third exercise&quot;,&quot;&quot;))
+[[Next|workout 3]]</tw-passagedata><tw-passagedata pid="4" name="workout 3" tags="" position="279,282" size="100,100">(set: $workout3 to (prompt: &quot;Third exercise&quot;,&quot;&quot;))
 (if: $workout3 is &quot;&quot;)[(undo:)]
 
 (if: $3ex is 1)[[Start workout|phase 1]]
-(if: $3ex is 0)[[Next|workout 4]]</tw-passagedata><tw-passagedata pid="5" name="workout 4" tags="" position="527,28" size="100,100">(set: $workout4 to (prompt: &quot;Fourth exercise&quot;,&quot;&quot;))
+(if: $3ex is 0)[[Next|workout 4]]</tw-passagedata><tw-passagedata pid="5" name="workout 4" tags="" position="404,283" size="100,100">(set: $workout4 to (prompt: &quot;Fourth exercise&quot;,&quot;&quot;))
 (if: $workout4 is &quot;&quot;)[(undo:)]
 
 (if: $4ex is 1)[[Start workout|phase 1]]
-(if: $4ex is 0)[[Next|workout 5]]</tw-passagedata><tw-passagedata pid="6" name="workout 5" tags="" position="652,28" size="100,100">(set: $workout5 to (prompt: &quot;Fifth exercise&quot;,&quot;&quot;))
+(if: $4ex is 0)[[Next|workout 5]]</tw-passagedata><tw-passagedata pid="6" name="workout 5" tags="" position="530,286" size="100,100">(set: $workout5 to (prompt: &quot;Fifth exercise&quot;,&quot;&quot;))
 (if: $workout5 is &quot;&quot;)[(undo:)]
 
 (if: $5ex is 1)[[Start workout|phase 1]]
-(if: $5ex is 0)[[Next|workout 6]]</tw-passagedata><tw-passagedata pid="7" name="phase 1" tags="" position="4,298" size="100,100">(random: 8,16) reps of (print: $fullworkout&#39;s (1))
+(if: $5ex is 0)[[Next|workout 6]]</tw-passagedata><tw-passagedata pid="7" name="phase 1" tags="" position="22,472" size="100,100">(random: $lowrep,$highrep) reps of (print: $fullworkout&#39;s (1))
 
-[[Next|phase 2]]</tw-passagedata><tw-passagedata pid="8" name="phase 2" tags="" position="133,297" size="100,100">(random: 8,16) reps of (print: $fullworkout&#39;s (2))
+[[Next|phase 2]]</tw-passagedata><tw-passagedata pid="8" name="phase 2" tags="" position="151,471" size="100,100">(random: $lowrep,$highrep) reps of (print: $fullworkout&#39;s (2))
 
-[[Next|phase 3]]</tw-passagedata><tw-passagedata pid="9" name="phase 3" tags="" position="260,297" size="100,100">(random: 8,16) reps of (print: $fullworkout&#39;s (3))
+[[Next|phase 3]]</tw-passagedata><tw-passagedata pid="9" name="phase 3" tags="" position="278,471" size="100,100">(random: $lowrep,$highrep) reps of (print: $fullworkout&#39;s (3))
 
 (if: $3ex is 0)[[Next|phase 4]]
-(if: $3ex is 1)[[Set 2|phase 1b]]</tw-passagedata><tw-passagedata pid="10" name="phase 4" tags="" position="381,296" size="100,100">(random: 8,16) reps of (print: $fullworkout&#39;s (4))
+(if: $3ex is 1)[[Set 2|phase 1b]]</tw-passagedata><tw-passagedata pid="10" name="phase 4" tags="" position="398,470" size="100,100">(random: $lowrep,$highrep) reps of (print: $fullworkout&#39;s (4))
 
 (if: $4ex is 0)[[Next|phase 5]]
-(if: $4ex is 1)[[Set 2|phase 1b]]</tw-passagedata><tw-passagedata pid="11" name="phase 5" tags="" position="504,293" size="100,100">(random: 8,16) reps of (print: $fullworkout&#39;s (5))
+(if: $4ex is 1)[[Set 2|phase 1b]]</tw-passagedata><tw-passagedata pid="11" name="phase 5" tags="" position="522,467" size="100,100">(random: $lowrep,$highrep) reps of (print: $fullworkout&#39;s (5))
 
 (if: $5ex is 0)[[Next|phase 6]]
-(if: $5ex is 1)[[Set 2|phase 1b]]</tw-passagedata><tw-passagedata pid="12" name="cooldown" tags="" position="840,546" size="100,100">Follow along with this cooldown
+(if: $5ex is 1)[[Set 2|phase 1b]]</tw-passagedata><tw-passagedata pid="12" name="cooldown" tags="" position="881,550" size="100,100">Follow along with this cooldown
 
 Thanks for playing! &lt;a href=http://www.roamingrangerfit.com&gt;roamingrangerfit.com&lt;/a&gt;
 
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/y_WtoHyB5ws&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="13" name="phase 1b" tags="" position="0,428" size="100,100">(random: 8,16) reps of (print: $fullworkout&#39;s (1))
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/y_WtoHyB5ws&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
-[[Next|phase 2b]]</tw-passagedata><tw-passagedata pid="14" name="phase 2b" tags="" position="124,427" size="100,100">(random: 8,16) reps of (print: $fullworkout&#39;s (2))
+[[Play again|restart]]</tw-passagedata><tw-passagedata pid="13" name="phase 1b" tags="" position="18,602" size="100,100">(random: $lowrep,$highrep) reps of (print: $fullworkout&#39;s (1))
 
-[[Next|phase 3b]]</tw-passagedata><tw-passagedata pid="15" name="phase 3b" tags="" position="247,425" size="100,100">(random: 8,16) reps of (print: $fullworkout&#39;s (3))
+[[Next|phase 2b]]</tw-passagedata><tw-passagedata pid="14" name="phase 2b" tags="" position="142,601" size="100,100">(random: $lowrep,$highrep) reps of (print: $fullworkout&#39;s (2))
+
+[[Next|phase 3b]]</tw-passagedata><tw-passagedata pid="15" name="phase 3b" tags="" position="265,599" size="100,100">(random: $lowrep,$highrep) reps of (print: $fullworkout&#39;s (3))
 
 (if: $3ex is 0)[[Next|phase 4b]]
-(if: $3ex is 1)[[Set 3|phase 1c]]</tw-passagedata><tw-passagedata pid="16" name="phase 4b" tags="" position="368,424" size="100,100">(random: 8,16) reps of (print: $fullworkout&#39;s (4))
+(if: $3ex is 1)[[Set 3|phase 1c]]</tw-passagedata><tw-passagedata pid="16" name="phase 4b" tags="" position="386,598" size="100,100">(random: $lowrep,$highrep) reps of (print: $fullworkout&#39;s (4))
 
 (if: $4ex is 0)[[Next|phase 5b]]
-(if: $4ex is 1)[[Set 3|phase 1c]]</tw-passagedata><tw-passagedata pid="17" name="phase 5b" tags="" position="506,420" size="100,100">(random: 8,16) reps of (print: $fullworkout&#39;s (5))
+(if: $4ex is 1)[[Set 3|phase 1c]]</tw-passagedata><tw-passagedata pid="17" name="phase 5b" tags="" position="523,594" size="100,100">(random: $lowrep,$highrep) reps of (print: $fullworkout&#39;s (5))
 
 (if: $5ex is 0)[[Next|phase 6b]]
-(if: $5ex is 1)[[Set 3|phase 1c]]</tw-passagedata><tw-passagedata pid="18" name="phase 1c" tags="" position="4,550" size="100,100">(random: 8,16) reps of (print: $fullworkout&#39;s (1))
+(if: $5ex is 1)[[Set 3|phase 1c]]</tw-passagedata><tw-passagedata pid="18" name="phase 1c" tags="" position="22,724" size="100,100">(random: $lowrep,$highrep) reps of (print: $fullworkout&#39;s (1))
 
-[[Next|phase 2c]]</tw-passagedata><tw-passagedata pid="19" name="phase 2c" tags="" position="126,553" size="100,100">(random: 8,16) reps of (print: $fullworkout&#39;s (2))
+[[Next|phase 2c]]</tw-passagedata><tw-passagedata pid="19" name="phase 2c" tags="" position="144,727" size="100,100">(random: $lowrep,$highrep) reps of (print: $fullworkout&#39;s (2))
 
-[[Next|phase 3c]]</tw-passagedata><tw-passagedata pid="20" name="phase 3c" tags="" position="247,550" size="100,100">(random: 8,16) reps of (print: $fullworkout&#39;s (3))
+[[Next|phase 3c]]</tw-passagedata><tw-passagedata pid="20" name="phase 3c" tags="" position="265,724" size="100,100">(random: $lowrep,$highrep) reps of (print: $fullworkout&#39;s (3))
 
 (if: $3ex is 0)[[Next|phase 4c]]
-(if: $3ex is 1)[[Cooldown|cooldown]]</tw-passagedata><tw-passagedata pid="21" name="phase 4c" tags="" position="368,550" size="100,100">(random: 8,16) reps of (print: $fullworkout&#39;s (4))
+(if: $3ex is 1)[[Cooldown|cooldown]]</tw-passagedata><tw-passagedata pid="21" name="phase 4c" tags="" position="386,724" size="100,100">(random: $lowrep,$highrep) reps of (print: $fullworkout&#39;s (4))
 
 (if: $4ex is 0)[[Next|phase 5c]]
-(if: $4ex is 1)[[Cooldown|cooldown]]</tw-passagedata><tw-passagedata pid="22" name="phase 5c" tags="" position="502,551" size="100,100">(random: 8,16) reps of (print: $fullworkout&#39;s (5))
+(if: $4ex is 1)[[Cooldown|cooldown]]</tw-passagedata><tw-passagedata pid="22" name="phase 5c" tags="" position="520,725" size="100,100">(random: $lowrep,$highrep) reps of (print: $fullworkout&#39;s (5))
 
 (if: $5ex is 0)[[Next|phase 6c]]
-(if: $5ex is 1)[[Cooldown|cooldown]]</tw-passagedata><tw-passagedata pid="23" name="3ex" tags="" position="0,173" size="100,100">3 exersises! Now we&#39;ll set what exercises we want to do for our workout.
+(if: $5ex is 1)[[Cooldown|cooldown]]</tw-passagedata><tw-passagedata pid="23" name="3ex" tags="" position="5,156" size="100,100">3 exersises! Now we&#39;ll set what exercises we want to do for our workout.
 
-[[Continue|workout 1]]
+[[Continue|reps low]]
 
 (set: $3ex to 1)
 
-(set: $fullworkout to (shuffled: &quot;$workout1&quot;, &quot;$workout2&quot;, &quot;$workout3&quot;))</tw-passagedata><tw-passagedata pid="24" name="4ex" tags="" position="120,173" size="100,100">4 exersises! Now we&#39;ll set what exercises we want to do for our workout.
+(set: $fullworkout to (shuffled: &quot;$workout1&quot;, &quot;$workout2&quot;, &quot;$workout3&quot;))</tw-passagedata><tw-passagedata pid="24" name="4ex" tags="" position="125,155" size="100,100">4 exersises! Now we&#39;ll set what exercises we want to do for our workout.
 
-[[Continue|workout 1]]
+[[Continue|reps low]]
 
 (set: $4ex to 1)
 
-(set: $fullworkout to (shuffled: &quot;$workout1&quot;, &quot;$workout2&quot;, &quot;$workout3&quot;, &quot;$workout4&quot;))</tw-passagedata><tw-passagedata pid="25" name="5ex" tags="" position="234,169" size="100,100">5 exersises! Now we&#39;ll set what exercises we want to do for our workout.
+(set: $fullworkout to (shuffled: &quot;$workout1&quot;, &quot;$workout2&quot;, &quot;$workout3&quot;, &quot;$workout4&quot;))</tw-passagedata><tw-passagedata pid="25" name="5ex" tags="" position="239,151" size="100,100">5 exersises! Now we&#39;ll set what exercises we want to do for our workout.
 
-[[Continue|workout 1]]
+[[Continue|reps low]]
 
 (set: $5ex to 1)
 
-(set: $fullworkout to (shuffled: &quot;$workout1&quot;, &quot;$workout2&quot;, &quot;$workout3&quot;, &quot;$workout4&quot;, &quot;$workout5&quot;))</tw-passagedata><tw-passagedata pid="26" name="6ex" tags="" position="361,169" size="100,100">6 exersises! Now we&#39;ll set what exercises we want to do for our workout.
+(set: $fullworkout to (shuffled: &quot;$workout1&quot;, &quot;$workout2&quot;, &quot;$workout3&quot;, &quot;$workout4&quot;, &quot;$workout5&quot;))</tw-passagedata><tw-passagedata pid="26" name="6ex" tags="" position="366,152" size="100,100">6 exersises! Now we&#39;ll set what exercises we want to do for our workout.
 
-[[Continue|workout 1]]
+[[Continue|reps low]]
 
-(set: $fullworkout to (shuffled: &quot;$workout1&quot;, &quot;$workout2&quot;, &quot;$workout3&quot;, &quot;$workout4&quot;, &quot;$workout5&quot;, &quot;$workout6&quot;))</tw-passagedata><tw-passagedata pid="27" name="workout 6" tags="" position="775,30" size="100,100">(set: $workout6 to (prompt: &quot;Sixth exercise&quot;,&quot;&quot;))
+(set: $fullworkout to (shuffled: &quot;$workout1&quot;, &quot;$workout2&quot;, &quot;$workout3&quot;, &quot;$workout4&quot;, &quot;$workout5&quot;, &quot;$workout6&quot;))</tw-passagedata><tw-passagedata pid="27" name="workout 6" tags="" position="658,288" size="100,100">(set: $workout6 to (prompt: &quot;Sixth exercise&quot;,&quot;&quot;))
 (if: $workout6 is &quot;&quot;)[(undo:)]
 
-[[Start workout!|phase 1]]</tw-passagedata><tw-passagedata pid="28" name="phase 6" tags="" position="613,288" size="100,100">(random: 8,16) reps of (print: $fullworkout&#39;s (6))
+[[Start workout!|phase 1]]</tw-passagedata><tw-passagedata pid="28" name="phase 6" tags="" position="631,462" size="100,100">(random: $lowrep,$highrep) reps of (print: $fullworkout&#39;s (6))
 
-[[Set 2|phase 1b]]</tw-passagedata><tw-passagedata pid="29" name="phase 6b" tags="" position="625,415" size="100,100">(random: 8,16) reps of (print: $fullworkout&#39;s (6))
+[[Set 2|phase 1b]]</tw-passagedata><tw-passagedata pid="29" name="phase 6b" tags="" position="643,589" size="100,100">(random: $lowrep,$highrep) reps of (print: $fullworkout&#39;s (6))
 
-[[Set 3|phase 1c]]</tw-passagedata><tw-passagedata pid="30" name="phase 6c" tags="" position="631,553" size="100,100">(random: 8,16) reps of (print: $fullworkout&#39;s (6))
+[[Set 3|phase 1c]]</tw-passagedata><tw-passagedata pid="30" name="phase 6c" tags="" position="649,727" size="100,100">(random: $lowrep,$highrep) reps of (print: $fullworkout&#39;s (6))
 
-[[Cooldown|cooldown]]</tw-passagedata></tw-storydata>
+[[Cooldown|cooldown]]</tw-passagedata><tw-passagedata pid="31" name="reps low" tags="" position="579,88" size="100,100">Now we&#39;ll set a rep range. What is the least number of reps you want to do for each exercise?
+
+[[6 reps|6rep]]
+[[8 reps|8rep]]
+[[10 reps|10rep]]</tw-passagedata><tw-passagedata pid="32" name="6rep" tags="" position="804,6" size="100,100">6 reps! Got it!
+(set: $lowrep to 6)
+[[Next|rep high]]</tw-passagedata><tw-passagedata pid="33" name="8rep" tags="" position="803,123" size="100,100">8 reps! Got it!
+(set: $lowrep to 8)
+[[Next|rep high]]</tw-passagedata><tw-passagedata pid="34" name="10rep" tags="" position="803,233" size="100,100">10 reps! Got it!
+(set: $lowrep to 10)
+[[Next|rep high]]</tw-passagedata><tw-passagedata pid="35" name="rep high" tags="" position="948,124" size="100,100">Now, what is the highest number of reps you want to do for each exercise?
+
+[[12 reps|12rep]]
+[[15 reps|15rep]]
+[[20 reps|20rep]]</tw-passagedata><tw-passagedata pid="36" name="12rep" tags="" position="1083,15" size="100,100">12 reps!
+(set: $highrep to 12)
+[[Pick exercises|workout 1]]</tw-passagedata><tw-passagedata pid="37" name="15rep" tags="" position="1085,126" size="100,100">15 reps!
+(set: $highrep to 15)
+[[Pick exercises|workout 1]]</tw-passagedata><tw-passagedata pid="38" name="20rep" tags="" position="1088,248" size="100,100">20 reps!
+(set: $highrep to 20)
+[[Pick exercises|workout 1]]</tw-passagedata><tw-passagedata pid="39" name="restart" tags="" position="1078,551" size="100,100">(reload:)</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.

@@ -20,13 +20,13 @@ tw-link {
 }
 
 tw-passage {
-	background-image: url(https://i.pinimg.com/originals/0c/e1/45/0ce1451d2d4cbaac9a31f72b4acb25fa.jpg);
+	background-image: url(paper.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   color: black;
   padding: 5%;
   font-weight: bold;
-  font-size: 30px
+  font-size: 30px;
 }
 
 tw-sidebar {
@@ -38,7 +38,7 @@ tw-story {
 }
 
 tw-story[tags~="outside"] {
-	background-image: url(https://www.toledomuseum.org/sites/default/files/1922_108.jpg);
+	background-image: url(outside.png);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100% 100%;
@@ -106,21 +106,21 @@ tw-story[tags~="opening"] {
 (print: $standing&#39;s (it + 1))
 
 (if: $long is 0 and $standingtimer is 3)[[Next|floor facing intro]]\
-(if: $long is 1 and $standingtimer is 5)[[Next|floor facing intro]]\
+(if: $long is 1 and $standingtimer is 6)[[Next|floor facing intro]]\
 (if: $long is 0 and $standingtimer is not 3)[[Next|standing]]\
-(if: $long is 1 and $standingtimer is not 5)[[Next|standing]]</tw-passagedata><tw-passagedata pid="5" name="floor facing" tags="cave" position="612,465" size="100,100">(set: $fftimer to it + 1)\
+(if: $long is 1 and $standingtimer is not 6)[[Next|standing]]</tw-passagedata><tw-passagedata pid="5" name="floor facing" tags="cave" position="612,465" size="100,100">(set: $fftimer to it + 1)\
 (print: $ff&#39;s (it + 1))
 
 (if: $long is 0 and $fftimer is 3)[[Next|seated intro]]\
-(if: $long is 1 and $fftimer is 5)[[Next|seated intro]]\
+(if: $long is 1 and $fftimer is 6)[[Next|seated intro]]\
 (if: $long is 0 and $fftimer is not 3)[[Next|floor facing]]\
-(if: $long is 1 and $fftimer is not 5)[[Next|floor facing]]</tw-passagedata><tw-passagedata pid="6" name="seated" tags="tunnel" position="809,478" size="100,100">(set: $seatedtimer to it + 1)\
+(if: $long is 1 and $fftimer is not 6)[[Next|floor facing]]</tw-passagedata><tw-passagedata pid="6" name="seated" tags="tunnel" position="809,478" size="100,100">(set: $seatedtimer to it + 1)\
 (print: $seated&#39;s (it + 1))
 
 (if: $long is 0 and $seatedtimer is 3)[[Next|cardio intro]]\
-(if: $long is 1 and $seatedtimer is 5)[[Next|cardio intro]]\
+(if: $long is 1 and $seatedtimer is 6)[[Next|cardio intro]]\
 (if: $long is 0 and $seatedtimer is not 3)[[Next|seated]]\
-(if: $long is 1 and $seatedtimer is not 5)[[Next|seated]]</tw-passagedata><tw-passagedata pid="7" name="cardio intro" tags="treasure" position="1005,329" size="100,100">You hop off your questionable transportation and head towards an open door. You peek in and there, in the middle of the room you see (print: $treasure&#39;s (1)). You inspect the room around it and it seems safe enough. So you move in carefully and pick it up. Suddenly the room starts to rumble and the dungeon begins to fall apart. You see a tunnel at the other end of the room so you head towards it.
+(if: $long is 1 and $seatedtimer is not 6)[[Next|seated]]</tw-passagedata><tw-passagedata pid="7" name="cardio intro" tags="treasure" position="1005,329" size="100,100">You hop off your questionable transportation and head towards an open door. You peek in and there, in the middle of the room you see (print: $treasure&#39;s (1)). You inspect the room around it and it seems safe enough. So you move in carefully and pick it up. Suddenly the room starts to rumble and the dungeon begins to fall apart. You see a tunnel at the other end of the room so you head towards it.
 
 [[Flee the dungeon|cardio]]</tw-passagedata><tw-passagedata pid="8" name="floor facing intro" tags="cave" position="608,317" size="100,100">The passage narrows and the ceiling closes in until you are down on your hands and knees. You must keep moving forward in this prone position to continue on.
 
@@ -128,13 +128,13 @@ tw-story[tags~="opening"] {
 
 [[Enter the dungeon|standing]] </tw-passagedata><tw-passagedata pid="10" name="seated intro" tags="tunnel" position="803,318" size="100,100">You come upon (print: $transport&#39;s (1)). It may seem dangerous, but you figure it’s your only way to get to your treasure.
 
-[[Sit down and hope for the best|seated]] </tw-passagedata><tw-passagedata pid="11" name="cardio" tags="crumble" position="1005,483" size="100,100">(set: $cardiotimer to it + 1)\
+[[Sit down and hope for the best|seated]] </tw-passagedata><tw-passagedata pid="11" name="cardio" tags="crumble" position="1007,483" size="100,100">(set: $cardiotimer to it + 1)\
 (print: $cardio&#39;s (it + 1))
 
 (if: $long is 0 and $cardiotimer is 3)[[Next|cooldown intro]]\
-(if: $long is 1 and $cardiotimer is 5)[[Next|cooldown intro]]\
+(if: $long is 1 and $cardiotimer is 6)[[Next|cooldown intro]]\
 (if: $long is 0 and $cardiotimer is not 3)[[Next|cardio]]\
-(if: $long is 1 and $cardiotimer is not 5)[[Next|cardio]]</tw-passagedata><tw-passagedata pid="12" name="cooldown intro" tags="opening" position="1207,336" size="100,100">As you turn a corner you see daylight coming through a doorway. You hastily make your way towards it, but a stone door starts to close in, making the exit narrower. You push through your fatigue and run as hard as you can. Just before the door closes, you manage to slip out into the open air. After taking a few deep breaths, you look down at (print: $treasure&#39;s (1)) in your hands. Knowing your quest is complete, you leisurely walk your way back to civilization.
+(if: $long is 1 and $cardiotimer is not 6)[[Next|cardio]]</tw-passagedata><tw-passagedata pid="12" name="cooldown intro" tags="opening" position="1207,336" size="100,100">As you turn a corner you see daylight coming through a doorway. You hastily make your way towards it, but a stone door starts to close in, making the exit narrower. You push through your fatigue and run as hard as you can. Just before the door closes, you manage to slip out into the open air. After taking a few deep breaths, you look down at (print: $treasure&#39;s (1)) in your hands. Knowing your quest is complete, you leisurely walk your way back to civilization.
 
 [[Start cooldown|cooldown]]</tw-passagedata><tw-passagedata pid="13" name="cooldown" tags="outside" position="1213,485" size="100,100">(set: $cooldowntimer to it + 1)\
 (print: $cooldown&#39;s (it + 1)) for (either: ...$time)
@@ -147,30 +147,30 @@ Folow along with this two minute cooldown stretch
 
 Made by &lt;a href=http://www.roamingrangerfit.com target=_blank&gt;roamingrangerfit.com&lt;/a&gt;
 
-[[Play again|restart]]</tw-passagedata><tw-passagedata pid="15" name="Intro" tags="outside" position="208,13" size="100,100">Welcome to the Fitness Dungeon Adventure! Here you&#39;re on a quest for treasure in a randomized dungeon. Everytime you play, you&#39;re workout will be different! There are videos along the way to teach you proper form and modifications for each exercise. Have fun!
+[[Play again|restart]]</tw-passagedata><tw-passagedata pid="15" name="Intro" tags="outside" position="208,12" size="100,100">Welcome to the Fitness Dungeon Adventure! Here you&#39;re on a quest for treasure in a randomized dungeon. Everytime you play, you&#39;re workout will be different! There are videos along the way to teach you proper form and modifications for each exercise. Have fun!
 
 [[Start short workout|Start short]]
 
 [[Start long workout|Start long]]
 
-&lt;i&gt;Always consult your physician before beginning any exercise program. If you experience any chest pain, stop and consult your healthcare provider.&lt;/i&gt;\
+&lt;i&gt;Always consult your physician before beginning any exercise program. If you experience any chest pain, stop and consult your healthcare provider.&lt;/i&gt;
+{
+(set: $time to (ds: &quot;20 seconds&quot;, &quot;30 seconds&quot;, &quot;40 seconds&quot;))
 
-(set: $time to (ds: &quot;20 seconds&quot;, &quot;30 seconds&quot;, &quot;40 seconds&quot;))\
+(set: $long to 0)
 
-(set: $long to 0)\
-
-(set: $lowerwarmup to (a: 1,2,3,4,5))\
-(set: $upperwarmup to (a: 1,2,3,4,5))\
-(set: $standing to (a: 1,2,3,4,5))\
-(set: $ff to (a: 1,2,3,4,5,6,7))\
-(set: $seated to (a: 1,2,3,4,5))\
-(set: $cardio to (a: 1,2,3,4,5))\
-(set: $cooldown to (a: 1,2,3,4))\
-(set: $setting to (a: 1,2,3,4,5))\
-(set: $outside to (a: 1,2,3))\
-(set: $treasure to (a: 1,2,3,4,5))\
-(set: $transport to (a: 1,2,3,4,5))\
-
+(set: $lowerwarmup to (a: 1,2,3,4,5))
+(set: $upperwarmup to (a: 1,2,3,4,5))
+(set: $standing to (a: 1,2,3,4,5,6))
+(set: $ff to (a: 1,2,3,4,5,6,7))
+(set: $seated to (a: 1,2,3,4,5,6))
+(set: $cardio to (a: 1,2,3,4,5,6))
+(set: $cooldown to (a: 1,2,3,4))
+(set: $setting to (a: 1,2,3,4,5))
+(set: $outside to (a: 1,2,3))
+(set: $treasure to (a: 1,2,3,4,5))
+(set: $transport to (a: 1,2,3,4))
+\
 (set: $lowerwarmup to (shuffled: 
 &quot;You take a step forward and sink knee deep into mud. You have to bring your knees up high to make it through.
 &lt;br&gt;
@@ -186,7 +186,7 @@ Do &lt;a href=https://youtu.be/eg3LGbYgc7I target=_blank&gt;marching knee flexio
 Do &lt;a href=https://youtu.be/EZ_fo-nFkps target=_blank&gt;cross body high knees&lt;/a&gt; for (either: ...$time)&quot;, 
 &quot;You make your way into a tomb and peek into the doorway. You see the magically reanimated corpses wandering around. You know that if you act like them, you can blend in and make it to the other side unnoticed.
 &lt;br&gt;
-Do &lt;a href=https://youtu.be/jK0NzN_d2uQ target=_blank&gt;toy soldiers&lt;/a&gt; for (either: ...$time)&quot;))\
+Do &lt;a href=https://youtu.be/jK0NzN_d2uQ target=_blank&gt;toy soldiers&lt;/a&gt; for (either: ...$time)&quot;))
 
 (set: $upperwarmup to (shuffled: 
 &quot;You find yourself in a marsh with mosquitos swarming everywhere. Swat the mosquitoes away as you make your way through the marsh.
@@ -203,15 +203,15 @@ Do &lt;a href=https://youtu.be/NbU6rW3BvbE target=_blank&gt;light punches&lt;/a&
 Do alternating &lt;a href=https://youtu.be/K4aR8rgTKkM target=_blank&gt;high reaches&lt;/a&gt; for (either: ...$time)&quot;, 
 &quot;The path gets darker and you can hardly see anything, suddenly a zombie emerges and grabs you. You have to fight it off.
 &lt;br&gt;
-Do &lt;a href=https://youtu.be/rGRsrjk8txw target=_blank&gt;uppercuts&lt;/a&gt; for (either: ...$time)&quot;))\
+Do &lt;a href=https://youtu.be/rGRsrjk8txw target=_blank&gt;uppercuts&lt;/a&gt; for (either: ...$time)&quot;))
 
 (set: $standing to (shuffled: 
 &quot;You walk down a wide hallway and feel a pressure plate sink below your foot. Arrows shoot out from the wall and you have to duck to avoid them.
 &lt;br&gt;
 Do (random: 8,16) &lt;a href=https://youtu.be/5IiNCr8GV_g target=_blank&gt;squats&lt;/a&gt;&quot;, 
-&quot;As you pass by a low wall, you hear heavy footsteps that shake the floor. You catch a glimpse of a giant minotaur. You crouch behind the wall and wait for the monster to pass by.
+&quot;As you pass by a low wall, you hear heavy footsteps that shake the floor. You catch a glimpse of a giant minotaur. You crouch behind the wall and tiptoe past the monster.
 &lt;br&gt;
-&lt;a href=https://youtu.be/1l-cw9OyzZE target=_blank&gt;Hold a squat&lt;/a&gt; position for (either: ...$time)&quot;, 
+Hold a squat and do (random: 8,16) toe taps with each leg&quot;, 
 &quot;You come up to a passage with exceptionally high steps. You make your way up.
 &lt;br&gt;
 Do (random: 8,16) &lt;a href=https://youtu.be/CXJxXkj6rEE target=_blank&gt;lunges&lt;/a&gt; on each leg&quot;, 
@@ -220,7 +220,10 @@ Do (random: 8,16) &lt;a href=https://youtu.be/CXJxXkj6rEE target=_blank&gt;lunge
 Do (random: 8,16) &lt;a href=https://youtu.be/08izdKsDTJI target=_blank&gt;frog squats&lt;/a&gt;&quot;, 
 &quot;As you walk down a narrow corridor, you hear a crack and turn to see small boulders hurling towards you! There&#39;s not enough time to run away so you dodge the boulders as they come.
 &lt;br&gt;
-Do (random: 8,16) &lt;a href=https://youtu.be/XgnHq4wOO5c target=_blank&gt;side lunges&lt;/a&gt; on each leg&quot;))\
+Do (random: 8,16) &lt;a href=https://youtu.be/XgnHq4wOO5c target=_blank&gt;side lunges&lt;/a&gt; on each leg&quot;
+&quot;You come to 2 bamboo poles that are far apart. You put a foot on each one and slowly shuffle your way across.
+&lt;br&gt;
+Do (random: 8,16) sumo squats&quot;))
 
 (set: $ff to (shuffled: 
 &quot;You crawl through a tunnel and a group of gnomes cross just below you in an intersecting tunnel. You clear a path from them under your belly because, as everyone knows, you don&#39;t want to see an angry gnome.
@@ -243,7 +246,7 @@ Do (random: 8,16) &lt;a href=https://youtu.be/klNavCA_9Rg target=_blank&gt;mount
 Do (random: 8,16) &lt;a href=https://youtu.be/4uFK3U5_HQ0 target=_blank&gt;cross body climbers&lt;/a&gt; with each leg&quot;, 
 &quot;The tunnel goes straight up and the only way to proceed is to climb on the vines lining the sides.
 &lt;br&gt;
-Do (random: 8,16) &lt;a href=https://youtu.be/rF3qto8bt7Q target=_blank&gt;spiderman climbers&lt;/a&gt; with each leg&quot;))\
+Do (random: 8,16) &lt;a href=https://youtu.be/rF3qto8bt7Q target=_blank&gt;spiderman climbers&lt;/a&gt; with each leg&quot;))
 
 (set: $seated to (shuffled: 
 &quot;Laying down the transport becomes bumpy. You press your elbows down to stabilize yourself.
@@ -260,7 +263,10 @@ Do (random: 8,16) &lt;a href=https://youtu.be/Fs0V2km3NWs target=_blank&gt;russi
 Do (random: 8,16) &lt;a href=https://youtu.be/nPXQfAK0tqM target=_blank&gt;bicycle crunches&lt;/a&gt; on each side&quot;, 
 &quot;Pixies fly in and try to take you away by your ankles! You fall back and pull your legs away one at a time to fight them off.
 &lt;br&gt;
-Do (random: 8,16) &lt;a href=https://youtu.be/MLzU7xhLdqA target=_blank&gt;leg lowers&lt;/a&gt; with each leg&quot;))\
+Do (random: 8,16) &lt;a href=https://youtu.be/MLzU7xhLdqA target=_blank&gt;leg lowers&lt;/a&gt; with each leg&quot;
+&quot;The transport gets stuck in between two rocks in a narrow passage. You have to push your way out with your legs.
+&lt;br&gt;
+Do (random: 8,16) leg extensions&quot;))
 
 (set: $cardio to (shuffled: 
 &quot;As you run down a corridor there is a line of goblins trying to escape ahead of you. You’re faster and taller than them so you hop over them as you pass by.  
@@ -277,21 +283,25 @@ Do &lt;a href=https://youtu.be/n4V7_zZsEAI target=_blank&gt;heismans&lt;/a&gt; f
 Do &lt;a href=https://youtu.be/uyITq6ACKxI target=_blank&gt;butt kicks&lt;/a&gt; for (either: ...$time)&quot;, 
 &quot;You approach the tops of stone pillars with lava down below. You have to hop from pillar to pillar.
 &lt;br&gt;
-&lt;a href=https://youtu.be/cYAxBwpRx2E target=_blank&gt;Hop in place&lt;/a&gt; for (either: ...$time)&quot;))\
+&lt;a href=https://youtu.be/cYAxBwpRx2E target=_blank&gt;Hop in place&lt;/a&gt; for (either: ...$time)&quot;
+&quot;As you run through a tunnel, low hanging vines obscure your view. You tear them down as you rush through
+&lt;br&gt;
+Do skiier jacks for (either: ...$time)&quot;))
 
 (set: $cooldown to (shuffled: 
 &quot;&lt;a href=https://youtu.be/cbXEBNrR-u4 target=_blank&gt;March in place&lt;/a&gt;&quot;, 
 &quot;Do &lt;a href=https://youtu.be/7a4jG-iaaoo targer=_blank&gt;side steps&lt;/a&gt;&quot;, 
 &quot;Do &lt;a href=https://youtu.be/eg3LGbYgc7I target=_blank&gt;Marching knee flexions&lt;/a&gt;&quot;, 
 &quot;Do &lt;a href=https://youtu.be/EZ_fo-nFkps target=_blank&gt;Cross body high knees&lt;/a&gt;&quot;))\
+\
+(set: $setting to (shuffled: &quot;an ancient temple&quot;, &quot;ancient ruins&quot;, &quot;the entrance to a network of caverns&quot;, &quot;a tomb for an ancient king&quot;, &quot;an abandoned wizard tower&quot;))
 
-(set: $setting to (shuffled: &quot;an ancient temple&quot;, &quot;ancient ruins&quot;, &quot;the entrance to a network of caverns&quot;, &quot;a tomb for an ancient king&quot;, &quot;an abandoned wizard tower&quot;))\
+(set: $outside to (shuffled: &quot;graveyard&quot;,&quot;cemetery&quot;,&quot;burial ground&quot;))
 
-(set: $outside to (shuffled: &quot;graveyard&quot;,&quot;cemetery&quot;,&quot;burial ground&quot;))\
+(set: $treasure to (shuffled: &quot;Pandora&#39;s box&quot;, &quot;The Sword of a Thousand Truths&quot;, &quot;Thor&#39;s hammer&quot;, &quot;The One Ring&quot;, &quot;Death&#39;s Scythe&quot;))
 
-(set: $treasure to (shuffled: &quot;Pandora&#39;s box&quot;, &quot;The Sword of a Thousand Truths&quot;, &quot;Thor&#39;s hammer&quot;, &quot;The One Ring&quot;, &quot;Death&#39;s Scythe&quot;))\
-
-(set: $transport to (shuffled: &quot;a mine cart&quot;, &quot;a magic carpet&quot;, &quot;a gnomish clockwork moterbike&quot;, &quot;a magic broomstick&quot;, &quot;a rickety rowboat in an underground stream&quot;))</tw-passagedata><tw-passagedata pid="16" name="Start long" tags="outside" position="84,135" size="100,100">You are a treasure hunter. You gaze upon (print: $setting&#39;s (1)) in the distance. First you have to make it through the (print: $outside&#39;s (1)) before entering the dungeon. The journey will be treacherous, but once you make it out, you will finally have (print: $treasure&#39;s (1)) in your possession!
+(set: $transport to (shuffled: &quot;a mine cart&quot;, &quot;a magic carpet&quot;, &quot;a gnomish clockwork transport&quot;, &quot;a rickety rowboat in an underground stream&quot;))
+}</tw-passagedata><tw-passagedata pid="16" name="Start long" tags="outside" position="84,135" size="100,100">You are a treasure hunter. You gaze upon (print: $setting&#39;s (1)) in the distance. First you have to make it through the (print: $outside&#39;s (1)) before entering the dungeon. The journey will be treacherous, but once you make it out, you will finally have (print: $treasure&#39;s (1)) in your possession!
 
 [[Begin your quest|warmup leg]]
 

@@ -25,7 +25,6 @@ tw-passage {
   background-size: 100% 100%;
   color: black;
   padding: 3%;
-  font-weight: bold;
 }
 
 tw-sidebar {
@@ -51,7 +50,7 @@ tw-story[tags~="graveyard"] {
 }
 
 tw-story[tags~="dungeon"] {
-	background-image: url(https://i.pinimg.com/originals/a6/ab/4d/a6ab4db5320e6a704692bde893cb2f70.png);
+	background-image: url(dungeon.jpg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100% 100%;
@@ -80,13 +79,6 @@ tw-story[tags~="treasure"] {
 
 tw-story[tags~="crumble"] {
 	background-image: url(https://i.imgur.com/dsMWB1p.jpg);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: 100% 100%;
-}
-
-tw-story[tags~="opening"] {
-	background-image: url(https://thumbs.dreamstime.com/b/dark-cave-bright-daylight-spot-exit-natural-opening-entrance-to-karst-mountain-inside-subterranean-background-153181591.jpg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100% 100%;
@@ -133,7 +125,7 @@ tw-story[tags~="opening"] {
 (if: $long is 0 and $cardiotimer is 3)[[Next|cooldown intro]]\
 (if: $long is 1 and $cardiotimer is 6)[[Next|cooldown intro]]\
 (if: $long is 0 and $cardiotimer is not 3)[[Next|cardio]]\
-(if: $long is 1 and $cardiotimer is not 6)[[Next|cardio]]</tw-passagedata><tw-passagedata pid="12" name="cooldown intro" tags="opening" position="1207,336" size="100,100">As you turn a corner you see daylight coming through a doorway. You hastily make your way towards it, but a stone door starts to close in, making the exit narrower. You push through your fatigue and run as hard as you can. Just before the door closes, you manage to slip out into the open air. After taking a few deep breaths, you look down at (print: $treasure&#39;s (1)) in your hands. Knowing your quest is complete, you leisurely walk your way back to civilization.
+(if: $long is 1 and $cardiotimer is not 6)[[Next|cardio]]</tw-passagedata><tw-passagedata pid="12" name="cooldown intro" tags="outside" position="1208,336" size="100,100">As you turn a corner you see daylight coming through a doorway. You hastily make your way towards it, but a stone door starts to close in, making the exit narrower. You push through your fatigue and run as hard as you can. Just before the door closes, you manage to slip out into the open air. After taking a few deep breaths, you look down at (print: $treasure&#39;s (1)) in your hands. Knowing your quest is complete, you leisurely walk your way back to civilization.
 
 [[Start cooldown|cooldown]]</tw-passagedata><tw-passagedata pid="13" name="cooldown" tags="outside" position="1213,485" size="100,100">(set: $cooldowntimer to it + 1)\
 (print: $cooldown&#39;s (it + 1)) for (either: ...$time)
@@ -146,7 +138,7 @@ Folow along with this two minute cooldown stretch
 
 Made by &lt;a href=http://www.roamingrangerfit.com target=_blank&gt;roamingrangerfit.com&lt;/a&gt;
 
-[[Play again|restart]]</tw-passagedata><tw-passagedata pid="15" name="Intro" tags="outside" position="208,11" size="100,100">Welcome to the Fitness Dungeon Adventure! Here you&#39;re on a quest for treasure in a randomized dungeon. Everytime you play, you&#39;re workout will be different! There are videos along the way to teach you proper form and modifications for each exercise. Have fun!
+[[Play again|restart]]</tw-passagedata><tw-passagedata pid="15" name="Intro" tags="outside" position="207,11" size="100,100">Welcome to the Fitness Dungeon Adventure! Here you&#39;re on a quest for treasure in a randomized dungeon. Everytime you play, you&#39;re workout will be different! There are videos along the way to teach you proper form and modifications for each exercise. Have fun!
 
 [[Start short workout|Start short]]
 

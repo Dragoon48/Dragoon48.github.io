@@ -1,0 +1,92 @@
+<style>
+p {
+   font-size: 30px;
+   font-family: "arial black";
+   text-align: "center";
+}
+
+h1 {
+	Font-size: 40px;
+    font-family: "impact";
+}
+
+h2 {
+	Font-size: 35px;
+    font-family: "impact";
+}
+
+.header {
+	text-align: center;
+    padding: 1px;
+    background-color: red;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border radius: 25px;
+    border-style: solid;
+    border-width: 5px;
+     border-radius: 20px;
+}
+
+h3 {
+	Font-size: 25px;
+   font-family: "arial black";
+   text-align: center;
+}
+
+
+a {
+    color: black;
+}
+
+.topnav {
+	background-color: gray;
+    overflow: hidden;
+}    
+
+.topnav a {
+	float: left;
+	color: white;
+    text-align: center;
+    padding: 10px 14px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: "arial black"
+}
+
+.button a {
+	background:    #d73415;
+	border:        1px solid #556699;
+	border-radius: 11px;
+	padding:       20px 45px;
+	color:         #ffffff;
+	display:       inline-block;
+	font:          normal bold 26px/1 "Open Sans", sans-serif;
+	text-align:    center;
+}
+
+.topnav a.active {
+  background-color: red;
+  color: black;
+}
+
+footer {
+	text-align:center;
+    padding: 10px;
+    background-color:gray;
+   	font-size: 25px;
+    font-family: "arial black"
+}
+
+table, tr, td {
+	font-size:15px;
+	font-family: "arial black";
+    padding: 8px;
+	text-align: center;
+
+}
+
+td {
+	border-style:solid;
+}
+
+</style>

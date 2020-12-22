@@ -69,7 +69,7 @@ tw-story[tags~="treasure"] {
 tw-story[tags~="crumble"] {
 	background-color: darkred;
 }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start short" tags="outside" position="336,139" size="100,100">You are a treasure hunter. You gaze upon (print: $setting&#39;s (1)) in the distance. First you have to make it through the (print: $outside&#39;s (1)) before entering the dungeon. The journey will be treacherous, but once you make it out, you will finally have (print: $treasure&#39;s (1)) in your possession!
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start short" tags="outside" position="336,139" size="100,100">You are a treasure hunter. You gaze upon (print: $setting&#39;s (1)) in the distance. First you have to make it through the (print: $outside&#39;s (1)) before entering the dungeon. The journey will be treacherous, but once you make it out, you will finally have (print: $treasure1&#39;s (1)) of (print: $treasure2&#39;s (1)) in your possession!
 
 [[Begin your quest|warmup leg]]</tw-passagedata><tw-passagedata pid="2" name="warmup leg" tags="graveyard" position="194,305" size="100,100">(set: $lowertimer to it + 1)\
 (print: $lowerwarmup&#39;s (it + 1))
@@ -97,13 +97,13 @@ tw-story[tags~="crumble"] {
 (if: $long is 0 and $seatedtimer is 3)[[Next|cardio intro]]\
 (if: $long is 1 and $seatedtimer is 6)[[Next|cardio intro]]\
 (if: $long is 0 and $seatedtimer is not 3)[[Next|seated]]\
-(if: $long is 1 and $seatedtimer is not 6)[[Next|seated]]</tw-passagedata><tw-passagedata pid="7" name="cardio intro" tags="treasure" position="1005,329" size="100,100">You hop off your questionable transportation and head towards an open door. You peek in and there, in the middle of the room you see (print: $treasure&#39;s (1)). You inspect the room around it and it seems safe enough. So you move in carefully and pick it up. Suddenly the room starts to rumble and the dungeon begins to fall apart. You see a tunnel at the other end of the room so you head towards it.
+(if: $long is 1 and $seatedtimer is not 6)[[Next|seated]]</tw-passagedata><tw-passagedata pid="7" name="cardio intro" tags="treasure" position="1005,329" size="100,100">You hop off your questionable transportation and head towards an open door. You peek in and there, in the middle of the room you see (print: $treasure1&#39;s (1)) of (print: $treasure2&#39;s (1)). You inspect the room around it and it seems safe enough. So you move in carefully and pick it up. Suddenly the room starts to rumble and the dungeon begins to fall apart. You see a tunnel at the other end of the room so you head towards it.
 
 [[Flee the dungeon|cardio]]</tw-passagedata><tw-passagedata pid="8" name="floor facing intro" tags="cave" position="608,317" size="100,100">The passage narrows and the ceiling closes in until you are down on your hands and knees. You must keep moving forward in this prone position to continue on.
 
 [[Crawl in|floor facing]] </tw-passagedata><tw-passagedata pid="9" name="standing intro" tags="dungeon" position="401,318" size="100,100">You enter the threshold of the dungeon and a burst of cold air chills you to the bone. There’s no turning back now, you came here on a quest.
 
-[[Enter the dungeon|standing]] </tw-passagedata><tw-passagedata pid="10" name="seated intro" tags="tunnel" position="803,318" size="100,100">You come upon (print: $transport&#39;s (1)). It may seem dangerous, but you figure it’s your only way to get to your treasure.
+[[Enter the dungeon|standing]] </tw-passagedata><tw-passagedata pid="10" name="seated intro" tags="tunnel" position="803,318" size="100,100">You come upon a rickety rowboat in an underground stream. It may seem dangerous, but you figure it’s your only way to get to your treasure.
 
 [[Sit down and hope for the best|seated]] </tw-passagedata><tw-passagedata pid="11" name="cardio" tags="crumble" position="1007,483" size="100,100">(set: $cardiotimer to it + 1)\
 (print: $cardio&#39;s (it + 1))
@@ -111,7 +111,7 @@ tw-story[tags~="crumble"] {
 (if: $long is 0 and $cardiotimer is 3)[[Next|cooldown intro]]\
 (if: $long is 1 and $cardiotimer is 6)[[Next|cooldown intro]]\
 (if: $long is 0 and $cardiotimer is not 3)[[Next|cardio]]\
-(if: $long is 1 and $cardiotimer is not 6)[[Next|cardio]]</tw-passagedata><tw-passagedata pid="12" name="cooldown intro" tags="outside" position="1208,336" size="100,100">As you turn a corner you see daylight coming through a doorway. You hastily make your way towards it, but a stone door starts to close in, making the exit narrower. You push through your fatigue and run as hard as you can. Just before the door closes, you manage to slip out into the open air. After taking a few deep breaths, you look down at (print: $treasure&#39;s (1)) in your hands. Knowing your quest is complete, you leisurely walk your way back to civilization.
+(if: $long is 1 and $cardiotimer is not 6)[[Next|cardio]]</tw-passagedata><tw-passagedata pid="12" name="cooldown intro" tags="outside" position="1208,336" size="100,100">As you turn a corner you see daylight coming through a doorway. You hastily make your way towards it, but a stone door starts to close in, making the exit narrower. You push through your fatigue and run as hard as you can. Just before the door closes, you manage to slip out into the open air. After taking a few deep breaths, you look down at (print: $treasure1&#39;s (1)) of (print: $treasure2&#39;s (1)) in your hands. Knowing your quest is complete, you leisurely walk your way back to civilization.
 
 [[Start cooldown|cooldown]]</tw-passagedata><tw-passagedata pid="13" name="cooldown" tags="outside" position="1213,485" size="100,100">(set: $cooldowntimer to it + 1)\
 (print: $cooldown&#39;s (it + 1)) for (either: ...$time)
@@ -124,7 +124,7 @@ Folow along with this two minute cooldown stretch
 
 Made by &lt;a href=http://www.roamingrangerfit.com target=_blank&gt;roamingrangerfit.com&lt;/a&gt;
 
-[[Play again|restart]]</tw-passagedata><tw-passagedata pid="15" name="Intro" tags="outside" position="207,11" size="100,100">Welcome to the Fitness Dungeon Adventure! Here you&#39;re on a quest for treasure in a randomized dungeon. Everytime you play, you&#39;re workout will be different! There are videos along the way to teach you proper form and modifications for each exercise. Have fun!
+[[Play again|restart]]</tw-passagedata><tw-passagedata pid="15" name="Intro" tags="outside" position="207,9" size="100,100">Welcome to the Fitness Dungeon Adventure! Here you&#39;re on a quest for treasure in a randomized dungeon. Everytime you play, you&#39;re workout will be different! There are videos along the way to teach you proper form and modifications for each exercise. Have fun!
 
 [[Start short workout|Start short]]
 
@@ -145,7 +145,8 @@ Made by &lt;a href=http://www.roamingrangerfit.com target=_blank&gt;roamingrange
 (set: $cooldown to (a: 1,2,3,4))
 (set: $setting to (a: 1,2,3,4,5))
 (set: $outside to (a: 1,2,3))
-(set: $treasure to (a: 1,2,3,4,5))
+(set: $treasure1 to (a: 1,2,3,4,5))
+(set: $treasure2 to (a: 1,2,3,4,5))
 (set: $transport to (a: 1,2,3,4))
 
 (set: $lowerwarmup to (shuffled: 
@@ -275,10 +276,12 @@ Do &lt;a href=https://youtu.be/OoDt4gP8EaI target=_blank&gt;skier jacks&lt;/a&gt
 
 (set: $outside to (shuffled: &quot;graveyard&quot;,&quot;cemetery&quot;,&quot;burial ground&quot;))
 
-(set: $treasure to (shuffled: &quot;Pandora&#39;s box&quot;, &quot;The Sword of a Thousand Truths&quot;, &quot;Thor&#39;s hammer&quot;, &quot;The One Ring&quot;, &quot;Death&#39;s Scythe&quot;))
+(set: $treasure1 to (shuffled: &quot;Sword&quot;, &quot;Staff&quot;, &quot;scroll&quot;, &quot;Ring&quot;, &quot;Tome&quot;))
+
+(set: $treasure2 to (shuffled: &quot;a Thousand Truths&quot;, &quot;Infinite Knowledge&quot;, &quot;Doom&quot;, &quot;Eternal Life&quot;, &quot;Magic Missle&quot;))
 
 (set: $transport to (shuffled: &quot;a mine cart&quot;, &quot;a magic carpet&quot;, &quot;a gnomish clockwork transport&quot;, &quot;a rickety rowboat in an underground stream&quot;))
-}</tw-passagedata><tw-passagedata pid="16" name="Start long" tags="outside" position="84,135" size="100,100">You are a treasure hunter. You gaze upon (print: $setting&#39;s (1)) in the distance. First you have to make it through the (print: $outside&#39;s (1)) before entering the dungeon. The journey will be treacherous, but once you make it out, you will finally have (print: $treasure&#39;s (1)) in your possession!
+}</tw-passagedata><tw-passagedata pid="16" name="Start long" tags="outside" position="84,134" size="100,100">You are a treasure hunter. You gaze upon (print: $setting&#39;s (1)) in the distance. First you have to make it through the (print: $outside&#39;s (1)) before entering the dungeon. The journey will be treacherous, but once you make it out, you will finally have (print: $treasure1&#39;s (1)) of (print: $treasure2&#39;s (1)) in your possession!
 
 [[Begin your quest|warmup leg]]
 

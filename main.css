@@ -89,4 +89,12 @@ td {
 	border-style:solid;
 }
 
+.starting-zone-table {
+    width: 100%;
+}
+
+.starting-zone-table td {
+    width: calc(100% / 7);
+}
+
 </style>
